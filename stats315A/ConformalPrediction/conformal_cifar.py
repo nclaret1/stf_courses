@@ -1,4 +1,4 @@
-# 
+# conformal_cifar.py
 import numpy as np
 import torch
 import torch.nn as nn
@@ -64,7 +64,6 @@ class CoverageChecker:
         avg_size = np.mean([len(pred_set) for pred_set in prediction_sets])
         return coverage, avg_size
 
-# Function wrappers to maintain original function names
 def calculate_quantile_loss(*args, **kwargs):
     return QuantileLossCalculator.calculate_quantile_loss(*args, **kwargs)
 
