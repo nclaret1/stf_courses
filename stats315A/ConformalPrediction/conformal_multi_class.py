@@ -6,7 +6,7 @@ from operator import itemgetter
 from scipy.optimize import minimize
 from itertools import starmap
 
-# Module-level state
+
 _state = {'alpha': 0.1}
 
 def set_alpha(alpha):
@@ -59,7 +59,7 @@ def check_coverage(prediction_sets, true_labels):
     avg_size = np.mean(list(map(len, prediction_sets)))
     return coverage, avg_size
 
-# Additional utility functions
+
 def apply_threshold(logits, threshold):
     return partial(create_prediction_sets, threshold=threshold)(logits)
 
